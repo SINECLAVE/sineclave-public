@@ -14,9 +14,12 @@ This repository holds what can be read and checked in public. The core of Sinecl
 |---|---|
 | [`docs/Sineclave_Security_Model_Whitepaper.pdf`](docs/Sineclave_Security_Model_Whitepaper.pdf) | Security model: threat model, what each kind of compromise yields, standards, operations, measurements and limitations (13 pages) |
 | [`docs/MEASUREMENTS.md`](docs/MEASUREMENTS.md) | How each published figure was obtained, and which figures are models rather than measurements |
+| [`docs/STRESS_TESTS.md`](docs/STRESS_TESTS.md) | Fault and saturation tests: nodes made to crash, lie or go silent during operation, and what came back |
+| [`benchmarks/`](benchmarks/) | Timings of the post-quantum primitives (ML-KEM, ML-DSA, hybrid TLS 1.3), including the FIPS 140-3 validated module |
+| [`tools/pq-bench/`](tools/pq-bench/) | Open-source (Apache-2.0) benchmark program that produced them — build and run it yourself |
 | [`SECURITY.md`](SECURITY.md) | How to report a security issue |
 
-Open-source verification tools will be added here as they are released.
+More open-source verification tools will be added here as they are released.
 
 ## Payments (pilot)
 

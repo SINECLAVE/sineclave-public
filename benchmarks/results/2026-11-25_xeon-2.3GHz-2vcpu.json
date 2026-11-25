@@ -1,0 +1,155 @@
+{
+  "method": "median of batches, single thread, warm-up first",
+  "results": [
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 keygen (fips203, pure Rust)",
+      "note": "FIPS 203",
+      "ops_per_s": 23354.0,
+      "us_per_op": 42.82
+    },
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 encaps (fips203)",
+      "note": "",
+      "ops_per_s": 22972.0,
+      "us_per_op": 43.53
+    },
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 decaps (fips203)",
+      "note": "",
+      "ops_per_s": 18013.0,
+      "us_per_op": 55.51
+    },
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 keygen (AWS-LC)",
+      "note": "",
+      "ops_per_s": 101156.0,
+      "us_per_op": 9.89
+    },
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 encaps (AWS-LC)",
+      "note": "",
+      "ops_per_s": 90823.0,
+      "us_per_op": 11.01
+    },
+    {
+      "group": "ML-KEM",
+      "name": "ML-KEM-768 decaps (AWS-LC)",
+      "note": "",
+      "ops_per_s": 73595.0,
+      "us_per_op": 13.59
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-44 keygen (fips204)",
+      "note": "FIPS 204",
+      "ops_per_s": 10305.0,
+      "us_per_op": 97.04
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-44 sign, 64 B (fips204)",
+      "note": "hedged",
+      "ops_per_s": 3855.0,
+      "us_per_op": 259.39
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-44 verify (fips204)",
+      "note": "",
+      "ops_per_s": 15678.0,
+      "us_per_op": 63.78
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-65 keygen (fips204)",
+      "note": "FIPS 204",
+      "ops_per_s": 5986.0,
+      "us_per_op": 167.07
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-65 sign, 64 B (fips204)",
+      "note": "hedged",
+      "ops_per_s": 2446.0,
+      "us_per_op": 408.91
+    },
+    {
+      "group": "ML-DSA",
+      "name": "ML-DSA-65 verify (fips204)",
+      "note": "",
+      "ops_per_s": 9251.0,
+      "us_per_op": 108.09
+    },
+    {
+      "group": "AEAD",
+      "name": "AES-256-GCM seal 1 KiB (AWS-LC)",
+      "note": "7527 MB/s",
+      "ops_per_s": 7350239.0,
+      "us_per_op": 0.14
+    },
+    {
+      "group": "AEAD",
+      "name": "AES-256-GCM seal 64 KiB (AWS-LC)",
+      "note": "16999 MB/s",
+      "ops_per_s": 259380.0,
+      "us_per_op": 3.86
+    },
+    {
+      "group": "Hash",
+      "name": "SHA-256, 1 MiB (AWS-LC)",
+      "note": "1922 MB/s",
+      "ops_per_s": 1833.0,
+      "us_per_op": 545.52
+    },
+    {
+      "group": "Hash",
+      "name": "SHA3-256, 1 MiB (sha3, pure Rust)",
+      "note": "490 MB/s",
+      "ops_per_s": 468.0,
+      "us_per_op": 2138.9
+    },
+    {
+      "group": "TLS 1.3",
+      "name": "full handshake, X25519MLKEM768 (hybrid PQ)",
+      "note": "post-quantum; 3072 B on the wire, both sides on one core",
+      "ops_per_s": 5211.0,
+      "us_per_op": 191.91
+    },
+    {
+      "group": "TLS 1.3",
+      "name": "full handshake, SECP256R1MLKEM768 (hybrid PQ)",
+      "note": "post-quantum; 3138 B on the wire, both sides on one core",
+      "ops_per_s": 4255.0,
+      "us_per_op": 235.0
+    },
+    {
+      "group": "TLS 1.3",
+      "name": "full handshake, SECP256R1 (classical)",
+      "note": "not post-quantum; 866 B on the wire, both sides on one core",
+      "ops_per_s": 5424.0,
+      "us_per_op": 184.36
+    },
+    {
+      "group": "TLS 1.3",
+      "name": "full handshake, X25519 (classical)",
+      "note": "not post-quantum; 800 B on the wire, both sides on one core",
+      "ops_per_s": 6960.0,
+      "us_per_op": 143.68
+    }
+  ],
+  "system": {
+    "arch": "x86_64",
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+    "fips_build": false,
+    "fips_mode": false,
+    "logical_cpus": 2,
+    "os": "linux"
+  },
+  "tool": "sineclave-pq-bench",
+  "version": "1.0.0"
+}
