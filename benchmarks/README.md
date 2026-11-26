@@ -8,7 +8,7 @@ reproduced on any machine.
 They are **not** Sineclave throughput figures: they contain no Sineclave protocol code. They show what the
 building blocks cost, which is the input to the capacity figures in [`docs/MEASUREMENTS.md`](../docs/MEASUREMENTS.md).
 
-## Result: 2 vCPU virtual machine (same size class as a Sineclave production node)
+## Result: 2 vCPU virtual machine (the earlier size class of a Sineclave production node; production nodes now run on 4 vCPU / 8 GB)
 
 Intel(R) Xeon(R) Processor @ 2.30GHz, 2 logical CPUs, Linux x86-64 · 25 November 2026 · median of 101 batches, single thread.
 The FIPS column is the same program built against the FIPS 140-3 validated AWS-LC module

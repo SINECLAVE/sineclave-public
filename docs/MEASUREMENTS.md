@@ -6,8 +6,9 @@ Every figure Sineclave publishes is labelled as **measured** or **model**. No fi
 |---|---|---|---|
 | Correctness under faults | 60,000 vaults, 0 incorrect results | measured | Stress test on a full cluster with nodes crashed, restarted and made to send wrong or conflicting data during operation; every vault was read back and compared with what was stored. Details: [STRESS_TESTS.md](STRESS_TESTS.md). |
 | Send | ≈2.6 s to send, ≈1.5 s to open | measured | Desktop client against the production cluster, end to end, including encryption, upload and key release. |
-| Infrastructure cost | ≈ €100 per month per cluster | measured | Current production hosting: one small virtual server per node, 2 vCPU / 4 GB. |
-| Capacity | 300,000 users per cluster | **model** | Per-operation costs (CPU, network, storage) measured on the real system, multiplied out for an assumed usage profile on 2 vCPU / 4 GB nodes. **Not yet a load-test result**; a production load test is the next step and its result will replace this model. |
+| Infrastructure cost | ≈ €300 per month per cluster | measured | Current production hosting: one virtual server per node, 4 vCPU / 8 GB. |
+| Capacity | more than 300,000 users per cluster | **model** | Per-operation costs (CPU, network, storage) measured on the real system, multiplied out for an assumed usage profile on 4 vCPU / 8 GB nodes. **Not yet a load-test result**; a production load test is the next step and its result will replace this model. |
+| Scaling with cores | capacity grows with CPU cores | measured + **model** | Since release 2.28 each node spreads its cryptographic work across all CPU cores. Measured on a test cluster: CPU time on the part of each request that must run in order fell by about 60 %, with 0 errors. Capacity on larger servers is a model from these measurements; a load test on the buyer's hardware confirms it. |
 
 Timings of the underlying post-quantum primitives, reproducible with an open-source tool: [benchmarks](../benchmarks/).
 

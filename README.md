@@ -23,9 +23,8 @@ More open-source verification tools will be added here as they are released.
 
 ## Payments (pilot)
 
-Sineclave is being extended to the payment path: a gateway that brings post-quantum protection to the
-link between a bank and its payment processor — without changing cards, terminals, the bank's systems or
-its certified PIN devices. Details are shared under NDA.
+A post-quantum payments gateway is already running against the live cluster, in pilot.
+Details are shared under NDA.
 
 ## Status
 
@@ -33,8 +32,9 @@ its certified PIN devices. Details are shared under NDA.
 |---|---|
 | Production cluster | live — Rust core on all nodes, post-quantum signatures enabled |
 | Independent cryptographic audit | next step — scope and test material prepared; the auditor's summary will be published here |
-| Production load test (300,000 users per cluster) | next step — currently a model from measured costs |
+| Capacity | more than 300,000 users per cluster on 4 vCPU / 8 GB servers — a model from measured costs; a production load test is the next step |
+| Scaling with cores | each server spreads its cryptographic work across all CPU cores, so per-cluster capacity grows with core count |
 | Payments gateway | pilot |
-| FIPS 140-3 module validation | not started — algorithms are FIPS 203 / 204 |
+| FIPS 140-3 | server cryptography runs on a FIPS 140-3 validated module (AWS-LC, CMVP #5314) in FIPS mode; validation of Sineclave itself as a module: not started |
 
 Contact: info@marant.hr · [sineclave.com/trust](https://sineclave.com/trust/)

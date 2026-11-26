@@ -51,7 +51,7 @@ then repeated on the fixed release.
 
 ## What is not claimed here
 
-- **Capacity.** 300,000 users per cluster is still a **model** built from measured costs, not a load-test
+- **Capacity.** More than 300,000 users per cluster is still a **model** built from measured costs, not a load-test
   result; a production load test is the next step (see [MEASUREMENTS.md](MEASUREMENTS.md)).
 - **The payments gateway** is in pilot; no figures are published for it yet.
 - The test harness and full reports are available to qualified buyers under NDA.
